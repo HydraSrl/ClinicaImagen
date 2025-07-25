@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="img/logomini.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <title>Clínica Imagen</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav style="cursor: pointer;" class="logo-header"><img src="img/logo.png" onclick="window.location.href='index.html'"></nav>
+        <div class="buttons-header">
+            <nav style="font-family: 'Karla';" class="links-header"><a href="pages/contacto.html">Contacto</a></nav>
+            <nav style="font-family: 'Karla';" class="links-header"><a href="index.html">Agendate</a></nav>
+            <div class="tratamientos-menu">
+                <input type="checkbox" id="tratamientos-toggle">
+                <label style="font-family: 'Karla';" for="tratamientos-toggle">Tratamientos</label>
+                <div class="tratamientos-view">
+                    <a style="font-family: 'Poppins';" href="pages/bracketsmetal.html">Brakets Metalicos</a>
+                    <a style="font-family: 'Poppins';" href="pages/bracketsceramica.html">Brakets Esteticos</a>
+                    <a style="font-family: 'Poppins';" href="pages/alineadoresinvisibles.html">Alineadores Invisibles</a>
+                    <a style="font-family: 'Poppins';" href="pages/ortodoncialingual.html">Ortodoncia Lingual</a>
+                    <a style="font-family: 'Poppins';" href="pages/ortodonciainterseptiva.html">Ortodoncia Interseptiva</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-perfil-container">
+            <div class="mobile-buttons-header">
+                <input type="checkbox" id="mobile-header-toggle">
+                <label for="mobile-header-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                </label>
+                <div class="mobile-header-view">
+                    <nav class="links-header"><a href="sobrenosotros.html">Contacto</a></nav>
+                    <nav class="links-header"><a href="#registro-button-section-main">Agendate</a></nav>
+                    <div class="tratamientos-menu-mobile">
+                        <input type="checkbox" id="tratamientos-toggle-mobile">
+                        <label for="tratamientos-toggle-mobile">Tratamientos</label>
+                        <div class="tratamientos-view-mobile">
+                            <a href="bracketsmetal.html">Brakets Metalicos</a>
+                            <a href="bracketsceramica.html">Brakets Esteticos</a>
+                            <a href="alineadoresinvisibles.html">Alineadores Invisibles</a>
+                            <a href="ortodoncialingual.html">Ortodoncia Lingual</a>
+                            <a href="ortodonciainterseptiva.html">Ortodoncia Interseptiva</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+    </div>
+    </header>
+    <main>
+        <!-- Primera section olvide el nombre (de todas maneras es hero por ser la "portada de la página") -->
+        <section id="hero-main">
+            <article style="font-family: 'Poppins';" class="slide-in-R">
+                <h1 style="font-size: xx-large;" >Lorem Ipsum</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. <br>
+                Sit amet consectetur adipiscing elit quisque faucibus ex. <br>
+                Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
+            </article>
+            <!--BACKGROUND IMAGE PLACEHOLDER  -->
+            <img class="parallax">
+            <div class="registro-button-section-main">
+                <button class="button-register" style="cursor:pointer;" onclick="window.location='pages/register.html'">
+                    Registrate aquí
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+                </button>
+            </div>
+        </section>
+        <!-- Olvide el nombre de la section (placeholder) -->
+                <section id="second-section-main">
+            <div class="articles-second-section1">
+                <aside class="scale-in">
+                    <img src="img/second-section1.jpg" alt="">
+                </aside>
+                <article style="font-family:'Karla', sans-serif;" class="slide-in-L">                
+                    <h2>Lorem Ipsum</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. <br>
+                    Sit amet consectetur adipiscing elit quisque faucibus ex. <br>
+                    Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
+            </article>
+            </div>
+            <div class="articles-second-section2">
+                <article style="font-family:'Karla', sans-serif;" class="slide-in-R">                
+                    <h2>Lorem Ipsum</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. <br>
+                    Sit amet consectetur adipiscing elit quisque faucibus ex. <br>
+                    Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
+                </article>
+                <aside class="scale-in">
+                    <img src="img/second-section2.jpg" alt="">
+                </aside>
+            </div>
+        </section>
+
+        <!-- Tercera section, no esta hecho el slide -->
+        <section id="slide-section-main">
+            <div class="article-container">
+                <article class="fade-in2">
+                    <!-- PLACEHOLDER PARA LA IMAGEN -->
+                    IMG
+                    <img src="" alt="">
+                    <h2>Lorem Ipsum</h1>
+                </article>
+                <article class="fade-in3">
+                    <!-- PLACEHOLDER PARA LA IMAGEN -->
+                    IMG
+                    <img src="" alt="">
+                    <h2>Lorem Ipsum</h1>
+                </article>
+                <article class="fade-in4">
+                    <!-- PLACEHOLDER PARA LA IMAGEN -->
+                    IMG
+                    <img src="" alt="">
+                    <h2>Lorem Ipsum</h1>
+                </article>               
+            </div>
+        </section>
+        <!-- Cuarta section, olvide el nombre (placeholder) -->
+    </main>
+    <footer>
+        <nav><img src="img/logomini.png"></nav>
+        <div>
+            <nav><p>Atlantida: 092 745 398</p> <img src="img/whatslogo.webp"></nav>
+            <nav><p>Facebook</p><img src="img/facebooklogo.png"></nav>
+            <nav><p>Instagram</p> <img src="img/inglogo.webp"></nav>
+        </div>
+    </footer>
+    <script src="script/script.js"></script>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Solo una vez
+            }
+        });
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+            document.querySelectorAll('.fade-in4').forEach(el => {
+            observer.observe(el);
+        });
+        document.querySelectorAll('.fade-in2').forEach(el => {
+            observer.observe(el);
+        });
+        document.querySelectorAll('.fade-in3').forEach(el => {
+            observer.observe(el);
+        });
+            document.querySelectorAll('.slide-in-R').forEach(el => {
+            observer.observe(el);
+        });
+            document.querySelectorAll('.slide-in-L').forEach(el => {
+            observer.observe(el);
+        });
+            document.querySelectorAll('.slide-in').forEach(el => {
+            observer.observe(el);
+        });
+        document.querySelectorAll('.scale-in').forEach(el => {
+            observer.observe(el);
+        });
+  </script>
+</body>
+</html>

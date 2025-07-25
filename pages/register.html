@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" href="../img/logomini.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <title>Registro</title>
+</head>
+<body>
+        <header>
+        <nav style="cursor: pointer;" class="logo-header"><img src="../img/logo.png" onclick="window.location.href='../index.html'"></nav>
+        <div class="buttons-header">
+            <nav class="links-header"><a href="contacto.html">Contacto</a></nav>
+            <nav class="links-header"><a href="../index.html">Agendate</a></nav>
+            <div class="tratamientos-menu">
+                <input type="checkbox" id="tratamientos-toggle">
+                <label for="tratamientos-toggle">Tratamientos</label>
+                <div class="tratamientos-view">
+                    <a href="bracketsmetal.html">Brakets Metalicos</a>
+                    <a href="bracketsceramica.html">Brakets Esteticos</a>
+                    <a href="alineadoresinvisibles.html">Alineadores Invisibles</a>
+                    <a href="ortodoncialingual.html">Ortodoncia Lingual</a>
+                    <a href="ortodonciainterseptiva.html">Ortodoncia Interseptiva</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-perfil-container">
+            <div class="mobile-buttons-header">
+                <input type="checkbox" id="mobile-header-toggle">
+                <label for="mobile-header-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                </label>
+                <div class="mobile-header-view">
+                    <nav class="links-header"><a href="contacto.html">Contacto</a></nav>
+                    <nav class="links-header"><a href="#registro-button-section-main">Agendate</a></nav>
+                    <div class="tratamientos-menu-mobile">
+                        <input type="checkbox" id="tratamientos-toggle-mobile">
+                        <label for="tratamientos-toggle-mobile">Tratamientos</label>
+                        <div class="tratamientos-view-mobile">
+                            <a href="bracketsmetal.html">Brakets Metalicos</a>
+                            <a href="bracketsceramica.html">Brakets Esteticos</a>
+                            <a href="alineadoresinvisibles.html">Alineadores Invisibles</a>
+                            <a href="ortodoncialingual.html">Ortodoncia Lingual</a>
+                            <a href="ortodonciainterseptiva.html">Ortodoncia Interseptiva</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+  </div>
+    </header>
+    <section class="sectionReg1">
+        <div class="register-box">
+            <div class="inputs-register">
+                <input placeholder="Nombre" id="name" class="Name">
+                <input placeholder="Apellido" id="sname" class="Sname">
+                <input placeholder="Contraseña" id="pass" class="Pass" type="password">
+                <input placeholder="Fecha de nacimiento" id="fechan" type="date" class="Fechan">
+                <select id="eot" onchange="EoT()">
+                    <option value="email">Email</option>
+                    <option value="tel">Telefono</option>
+                </select>
+                <input placeholder="Contacto" id="contacto" class="Contacto">
+            </div>
+            <div class="buttons-register">
+                <button class="already-account-button" onclick="window.location.href='login.html'">Ya tengo una cuenta</button>
+                <div class="userlist-register-buttons">
+                    <button class="register-button" id="register" onclick="Registrar()">Registrar</button>
+                    <button class="user-list-button" id="list" onclick="Listar()">Lista de Usuarios</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../script/script.js"></script>
+</body>
+</html>

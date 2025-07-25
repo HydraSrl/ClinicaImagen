@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" href="../img/logomini.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+        <header>
+       <nav style="cursor: pointer;" class="logo-header"><img src="../img/logo.png" onclick="window.location.href='../index.html'"></nav>
+        <div class="buttons-header">
+            <nav class="links-header"><a href="contacto.html">Contacto</a></nav>
+            <nav class="links-header"><a href="../index.html">Agendate</a></nav>
+            <div class="tratamientos-menu">
+                <input type="checkbox" id="tratamientos-toggle">
+                <label for="tratamientos-toggle">Tratamientos</label>
+                <div class="tratamientos-view">
+                    <a href="bracketsmetal.html">Brakets Metalicos</a>
+                    <a href="bracketsceramica.html">Brakets Esteticos</a>
+                    <a href="alineadoresinvisibles.html">Alineadores Invisibles</a>
+                    <a href="ortodoncialingual.html">Ortodoncia Lingual</a>
+                    <a href="ortodonciainterseptiva.html">Ortodoncia Interseptiva</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-perfil-container">
+            <div class="mobile-buttons-header">
+                <input type="checkbox" id="mobile-header-toggle">
+                <label for="mobile-header-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                </label>
+                <div class="mobile-header-view">
+                    <nav class="links-header"><a href="contacto.html">Contacto</a></nav>
+                    <nav class="links-header"><a href="#registro-button-section-main">Agendate</a></nav>
+                    <div class="tratamientos-menu-mobile">
+                        <input type="checkbox" id="tratamientos-toggle-mobile">
+                        <label for="tratamientos-toggle-mobile">Tratamientos</label>
+                        <div class="tratamientos-view-mobile">
+                            <a href="bracketsmetal.html">Brakets Metalicos</a>
+                            <a href="bracketsceramica.html">Brakets Esteticos</a>
+                            <a href="alineadoresinvisibles.html">Alineadores Invisibles</a>
+                            <a href="ortodoncialingual.html">Ortodoncia Lingual</a>
+                            <a href="ortodonciainterseptiva.html">Ortodoncia Interseptiva</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+  </div>
+    </header>
+    <section class="sectionLog1">
+        <div class="login-box">
+            <div class="inputs-login">
+                <input placeholder="Contacto" id="contacto">
+                <input type="password" placeholder="Contraseña" id="pass">
+            </div>
+            <div class="buttons-login">
+                <button class="no-account-button" onclick="window.location.href='register.html'">No tengo cuenta</button>
+                <div class="userlist-login-buttons">
+                    <button class="login-button" onclick="login()">Login</button>
+                    <button class="user-list-button" id="list" onclick="Listar()">Lista de Usuarios</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1268 @@
+body {
+    margin: 0; 
+    padding: 0;
+}
+
+/* PRESET DESKTOP TABLET Y MOBILE
+
+/* Mobile (nombre secion) */
+
+/* Cuando haya mas de 1000px (vista desktop) */
+/*
+@media (min-width: 1000px) {
+
+}
+
+/* Cuando haya menos de 1000px (vista tablet) */
+/*
+@media (max-width: 1000px) {
+
+}
+
+/* cuando haya menos de 600px (vista mobile) */
+/*
+@media (max-width: 600px) {
+
+}
+
+
+
+/* (ALGUNOS DE LOS BORDER SON PARA VISUALIZACION LUEGO SE QUITAN YA QUE ES ESTRUCTURA FUNDAMENTAL) */
+/* Comienza header */
+
+header {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: black;
+    border-bottom: black solid 1px;
+    opacity: 0.9;
+}
+
+header > div.buttons-header {
+    width: 25%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 5rem;
+}
+
+header > div > .links-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+header > div > .links-header > a {
+    text-decoration: none;
+    color: white;
+}
+
+header > div > .links-header> a:hover {
+    color: skyblue;
+}
+
+header > nav.logo-header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+    box-sizing: border-box;
+}
+
+header > nav.logo-header > img {
+    aspect-ratio: 3/1;
+}
+
+/* Mobile Header */
+
+/* Cuando haya mas de 1000px (vista desktop) */
+
+@media (min-width: 1000px) {
+    .mobile-buttons-header * {
+        display: none;
+    }
+    .buttons-header {
+        display: flex;
+    }
+}
+
+/* Cuando haya menos de 1000px (vista tablet) */
+
+@media (max-width: 1000px) {
+    header > nav.logo-header > img {
+    width: 10rem;
+    }
+    .buttons-header {
+        display: none;
+    }
+    .mobile-buttons-header {
+        display: block;
+    }
+    .mobile-header-view {
+        width: 20rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* cuando haya menos de 600px (vista mobile) */
+
+@media (max-width: 600px) {
+    .mobile-header-view {
+        width: 10rem;
+        font-size: 1rem;
+    }
+}
+
+/* Menú hamburguesa Tratamientos */
+
+#tratamientos-toggle {
+    display: none;
+}
+
+.tratamientos-view {
+    display: none;
+    position: absolute;
+    border: #666 solid 1px;
+    padding: 1rem;
+}
+
+.tratamientos-view > a {
+    text-decoration: none;
+    color: #444;
+}
+.tratamientos-view > a:hover {
+    color: #4169E1;
+    
+}
+
+.tratamientos-menu > label {
+    color: white;
+}
+
+
+.tratamientos-menu > label:hover {
+    color: skyblue;
+    cursor: pointer;
+}
+
+#tratamientos-toggle:checked + label + .tratamientos-view {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 0.5rem;
+}
+
+/*Menú hamburguesa de mobile*/
+
+#mobile-header-toggle {
+    display: none;
+}
+
+.mobile-header-view {
+    display: none;
+    position: absolute;
+    border: #666 solid 1px;
+    padding: 1rem;
+    transform: translateX(-80%);
+}
+
+.mobile-header-view > nav > a {
+    text-decoration: none;
+    color: #444;
+}
+.mobile-header-view > nav > a:hover {
+    text-decoration: none;
+    color: #4169E1;
+}
+
+.mobile-buttons-header > label {
+    color: white;
+}
+.mobile-buttons-header > label > svg {
+    color: white;
+    align-self: start;
+    width: 2.5rem;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.mobile-buttons-header > label:hover {
+    color: gray;
+}
+
+#mobile-header-toggle:checked + label + .mobile-header-view {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    gap: 0.5rem;
+}
+
+/*Menú de tratamientos mobile*/
+
+.tratamientos-menu-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tratamientos-view-mobile {
+    width: 95%;
+    display: none;
+    position: relative;
+    padding: 0.5rem 0;
+    align-self: center;
+}
+
+.tratamientos-view-mobile > a {
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    color: #444;
+}
+.tratamientos-view-mobile > a:hover {
+    color: #4169E1;
+}
+
+.tratamientos-menu-mobile > label {
+    color: #444;
+}
+.tratamientos-menu-mobile > label:hover {
+    color: #4169E1;
+}
+
+#tratamientos-toggle-mobile {
+    display: none;
+}
+
+#tratamientos-toggle-mobile:checked + label + .tratamientos-view-mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 0.5rem;
+}
+
+/*Controlador del menú */
+
+#toggle-menu {
+    display: none;
+}
+
+/*Boton de Menú */
+
+.menu-btn {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 1.2rem 1.25rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Ventana del menú */
+
+.menu-ventana {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    right: 2.5rem;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 10px;
+    width: 180px;
+    opacity: 90%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.menu-ventana a {
+    text-align: center;
+    display: block;
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-ventana a:hover {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+/*Mostrar el menú */
+
+#toggle-menu:checked + label + .menu-ventana {
+    display: block;
+}
+
+/*Termina el menú de Perfil*/
+/* Termina header */
+/* ---------------------------------- */
+/* Comienza primera sección: #hero-main */
+.parallax {
+    background-image: url('../img/hero.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section#hero-main {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+section#hero-main > article {
+    z-index: 1;
+    position: absolute;
+    padding-left: 15%;
+}
+
+section#hero-main > article > h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+section#hero-main > article > p {
+    font-size: 1.5rem;
+}
+section#hero-main > img {
+    width: 100%;
+    height: 111%;
+    opacity: 0.9;
+    object-fit: cover;
+    z-index: 0;
+    box-sizing: border-box;
+}
+ 
+/* Termina primera sección: #hero-main */
+/* ---------------------------------- */
+/* Comienza segunda sección: #second-section-main */
+
+
+section#second-section-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    box-sizing: border-box;
+    background: rgb(245, 245, 220) ;
+}
+
+section#second-section-main > div.articles-second-section1 {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    gap: 5rem;
+    margin-top: 50px ;
+    padding: 1rem;
+    aside {
+        img {
+            width: 130%;
+            height: 130%;
+            border-radius: 100%;
+        }
+    }
+}
+section#second-section-main > div.articles-second-section2 {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 5rem;
+    padding: 1rem;
+    aside {
+        img {
+            width: 130%;
+            height: 130%;
+            border-radius: 100%;
+        }
+    }
+}
+
+section#second-section-main > div.articles-second-section1 > article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+section#second-section-main > div.articles-second-section1 > aside {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+section#second-section-main > div.articles-second-section2 > article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+section#second-section-main > div.articles-second-section2 > aside {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+
+
+/* Mobile second section */
+
+/* Cuando haya mas de 1000px (vista desktop) */
+
+@media (min-width: 1000px) {
+    section#second-section-main {
+        height: 150vh;
+        gap: 5rem;
+    }
+    section#second-section-main > div.articles-second-section1 {
+        width: 75%;
+    }
+    section#second-section-main > div.articles-second-section2 {
+        width: 75%;
+    }
+}
+
+/* Cuando haya menos de 1000px (vista tablet) */
+
+@media (max-width: 1000px) {
+    section#second-section-main {
+        height: 90vh;
+        gap: 5rem;
+    }
+    section#second-section-main > div.articles-second-section1 {
+        width: 90%;
+    }
+    section#second-section-main > div.articles-second-section2 {
+        width: 90%;
+    }
+}
+
+/* cuando haya menos de 600px (vista mobile) */
+
+@media (max-width: 600px) {
+    section#second-section-main {
+        height: 200vh;
+        gap: 5rem;
+    }
+    section#second-section-main > div.articles-second-section1 {
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+        section#second-section-main > div.articles-second-section2 {
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+
+/* Termina segunda sección: #second-section-main */
+/* ---------------------------------- */
+/* Comienza transicion de sección: .section-transition */
+
+/* Termina transicion de sección: .section-transition */
+/* ---------------------------------- */
+/* Comienza tercera sección: #slide-section-main */
+
+section#slide-section-main {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(245, 245, 220) ;
+}
+
+section#slide-section-main > div.article-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+section#slide-section-main > div.article-container > article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border: 1px solid black;
+}
+
+section#slide-section-main > div.article-container > article > h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 20%;
+    margin: 0;
+    border: 1px solid black;
+}
+
+/* Comienza transicion de sección: .section-transition */
+/* NO HAY CÓDIGO DEBIDO A QUE ESTA HECHO MAS ARRIBA (LINEA 120-126) */
+
+/* Termina transicion de sección: .section-transition */
+/* ---------------------------------- */
+/* Comienza cuarta sección: #fourth-section-main */
+
+
+
+/* Termina cuarta sección: #fourth-section-main */
+/* ---------------------------------- */
+/* Comienza quinta sección: #registro-button-section-main */
+
+.registro-button-section-main {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 2;
+}
+
+.registro-button-section-main > div.upper-background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.registro-button-section-main > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: lightblue;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2rem;
+    box-sizing: border-box;
+}
+.registro-button-section-main > button:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: rgb(209, 244, 255);
+    font-size: 1rem;
+    border: none;
+    border-radius: 2rem;
+    box-sizing: border-box;
+}
+/* Mobile registro-button-section-main */
+
+/* Cuando haya mas de 1000px (vista desktop) */
+
+@media (min-width: 1000px) {
+    .registro-button-section-main {
+        height: 10%;
+    }
+
+    .registro-button-section-main > button {
+        height: 70%;
+        width: 85%;
+        gap: 10px;
+        svg {
+            height: 60%;
+            width: 15%;
+        }
+    }
+}
+
+/* Cuando haya menos de 1000px (vista tablet) */
+
+@media (max-width: 1000px) {
+    .registro-button-section-main {
+    }
+
+    .registro-button-section-main > button {
+    }
+}
+
+/* cuando haya menos de 600px (vista mobile) */
+
+@media (max-width: 600px) {
+    .registro-button-section-main {
+    }
+
+    .registro-button-section-main > button {
+    }
+
+}
+
+
+/* Termina quinta sección: #registro-button-section-main */
+/* ---------------------------------- */
+/* Comienza footer */
+
+footer {
+    width: 100%;
+    height: 13vh;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+footer > nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 5%;
+    height: 100%;
+}
+
+footer > div {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    gap: auto;
+    width: 80%;
+    height: 100%;
+}
+
+footer > div > nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+        img{
+            width: 10%;
+        }
+}
+
+/* Termina footer */
+
+/* Tratamientos */
+
+.Trat1sec1{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    img{
+        border-radius: 10px;
+        width: 95%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 1.8/1;
+    }
+    p {
+        width: 85%;
+        margin: 0;
+        padding: 1rem;
+        padding-top: 2rem;
+        box-sizing: border-box;
+    }
+}
+.Trat1sec2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 1rem 1rem 1rem;
+    img{
+        
+        width: 95%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        aspect-ratio: 1.8/1;
+    }
+    p {
+        width: 85%;
+        margin: 0;
+        padding: 1rem;
+        padding-bottom: 2rem;
+        box-sizing: border-box;
+    }
+}
+.SectionTrat{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 80vh;
+    margin-top: -2vh;
+}
+
+/* Mobile (nombre secion) */
+
+/* Cuando haya mas de 1000px (vista desktop) */
+
+@media (min-width: 1000px) {
+    .SectionTrat {
+        flex-direction: row;
+    }
+    .Trat1sec1 {
+        width: 50%;
+    }
+    .Trat1sec2 {
+        width: 50%;
+    }
+}
+
+/* Cuando haya menos de 1000px (vista tablet) */
+
+@media (max-width: 1000px) {
+    .SectionTrat {
+        flex-direction: column;
+        height: auto;
+    }
+    .Trat1sec1 {
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+    .Trat1sec2 {
+        width: 90%;
+    }
+}
+
+/* cuando haya menos de 600px (vista mobile) */
+
+@media (max-width: 600px) {
+
+}
+
+/* Sobre Nosotros */
+
+.sectionSobreN1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    gap: 60px;
+    padding: 1rem;
+}
+.sectionSobreN2{
+    padding: 1rem;
+    box-sizing: border-box;
+    gap: 60px;
+}
+#map {
+    align-items: center;
+    height: 400px;
+    width: 90%;
+    border-radius: 20px;
+    border: 2px;
+    border-color: gray;
+    z-index: 1;
+}
+.Titulo{
+    margin-top: 10vh;
+    text-align: center;
+    width: 300px;
+    justify-self: center;
+}
+.SelMap{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    button{
+        color: white;
+        background-color: rgb(99, 99, 99);
+        border-radius: 3px;
+        cursor: pointer;
+    }
+}
+.ImgClinicas{
+    display: flex;
+    flex-direction: row;
+    img{
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    }
+}
+
+
+/* Mobile Sobre Nosotros */
+
+/* Cuando haya mas de 1000px (vista desktop) */
+
+@media (min-width: 1000px) {
+
+}
+
+/* Cuando haya menos de 1000px (vista tablet) */
+
+@media (max-width: 1000px) {
+    .sectionSobreN1 {
+        flex-direction: column;
+        width: 100%;
+    }
+    .sectionSobreN2 {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* cuando haya menos de 600px (vista mobile) */
+
+@media (max-width: 600px) {
+    .sectionSobreN1 {
+        flex-direction: column;
+    }
+    .sectionSobreN2 {
+        flex-direction: column;
+    }
+}
+
+
+/*  Login  */
+
+.buttons-login{
+    border-radius: 20px;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 4rem 3rem 4rem;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+.userlist-login-buttons {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.login-button {
+    height: 20%;
+    align-self: flex-start;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.login-button:hover {
+    opacity: 80%;
+}
+
+.no-account-button {
+    align-self: flex-end;
+    justify-self: flex-start;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.no-account-button:hover {
+    opacity: 80%;
+}
+
+.user-list-button {
+    align-self: flex-end;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.user-list-button:hover {
+    opacity: 80%;
+}
+
+
+.inputs-login{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    gap: 10px;
+    padding: 0.5rem;
+    input{
+        border-radius: 7px;
+        border: 2px solid black;
+        width: 50%;
+        height: 20%;
+        font-size: 2rem;
+        text-align: center;
+    }
+    input:hover {
+        opacity: 95%;
+    }
+}
+.sectionLog1{
+    height: 80vh;
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #444;
+}
+
+
+/* Mobile Login */
+
+/* Cuando haya mas de 1000px (vista desktop) */
+
+@media (min-width: 1000px) {
+    .login-button { 
+        width: 60%;
+    }
+    .user-list-button {
+        width: 25%;
+    }
+    .no-account-button {
+        width: 15%;
+    }
+}
+
+/* Cuando haya menos de 1000px (vista tablet) */
+
+@media (max-width: 1000px) {
+    .login-button { 
+        width: 60%;
+    }
+    .user-list-button {
+        width: 40%;
+    }
+    .no-account-button {
+        width: 15%;
+    }
+}
+
+/* cuando haya menos de 600px (vista mobile) */
+
+@media (max-width: 600px) {
+    .login-button { 
+        width: auto;
+    }
+    .user-list-button {
+        width: auto;
+    }
+    .no-account-button {
+        width: auto;
+    }
+}
+
+
+/*  Register  */
+
+.buttons-register{
+    border-radius: 20px;
+    width: 100%;
+    height: 35%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem 4rem 3rem 4rem;
+    box-sizing: border-box;
+}
+
+
+.userlist-register-buttons {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.register-button {
+    height: 30%;
+    align-self: flex-start;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.register-button:hover {
+    opacity: 80%;
+}
+
+.already-account-button {
+    width: 15%;
+    align-self: flex-end;
+    justify-self: flex-start;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.already-account-button:hover {
+    opacity: 80%;
+}
+
+.inputs-register{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 100%;
+    height: 65%;
+    box-sizing: border-box;
+    gap: 10px;
+    padding: 3rem;
+    padding-bottom: 0;
+    input{
+        border-radius: 7px;
+        border: 2px solid black;
+        width: 50%;
+        height: 20%;
+        font-size: 2rem;
+        text-align: center;
+    }
+    input:hover {
+        opacity: 95%;
+    }
+    select {
+        width: 10rem;
+        height: 3rem;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+}
+
+.register-box {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #444;
+}
+
+.sectionReg1{
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Mobile Register */
+
+/* Cuando haya mas de 1000px (vista desktop) */
+
+@media (min-width: 1000px) {
+    .sectionReg1 {
+        height: 80vh;
+    }
+    .register-button {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sectionReg1 {
+        height: 80vh;
+    }
+    .register-button {
+        width: 60%;
+    }
+    .already-account-button {
+        width: 30%;
+        height: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .sectionReg1 {
+        height: 100vh;
+    }
+    .register-button {
+        width: auto;
+    }
+    .already-account-button {
+        width: auto;
+        height: auto;
+    }
+    .inputs-register {
+        input {
+            width: 100%;
+        }
+    }
+}
+
+/* Animaciones */
+
+.fade-in2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-in3 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1.5s ease;
+}
+.fade-in3.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-in4 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 2s ease;
+}
+.fade-in4.visible {
+    opacity: 1;
+    transform: translateY(0);
+    
+}
+.slide-in-R {
+    opacity: 0;
+    animation: slideIn 0.2s ease-out forwards;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.slide-in-R.visible{
+    opacity: 1;
+    transform: translateX(0);
+    
+}
+.slide-in-L {
+    opacity: 0;
+    animation: slideIn 0.2s ease-out forwards;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.slide-in-L.visible{
+    opacity: 1;
+    transform: translateX(0);
+    
+}
+.scale-in {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.8s ease;    
+}
+.scale-in.visible{
+    opacity: 1;
+    transform: translateX(0);
+    
+}
+.fade-in {
+    animation: fadeIn 0.7s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+    transform: translateY(20px);
+    opacity: 0;
+    }
+    to {
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+@keyframes slideIn {
+    from {
+    transform: translateX(-100px);
+    opacity: 0;
+    }
+    to {
+    transform: translateX(0);
+    opacity: 1;
+    }
+} 
+.slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.box {
+    width: 80%;
+    margin: 150vh auto;
+    padding: 50px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.Alinvtitulo{
+    width: 100%;
+    h1{
+        margin-top: 12vh;
+        text-align: center;
+    }
+}
